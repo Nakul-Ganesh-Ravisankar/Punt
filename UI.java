@@ -1,3 +1,9 @@
+// TranslationUI.java
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import com.google.protobuf.ByteString;
+
 public class TranslationUI {
     private JFrame frame;
     private JTextField inputTextField;
@@ -52,10 +58,5 @@ public class TranslationUI {
         frame.setSize(400, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-    }
-
-    public static void main(String[] args) throws Exception {
-        TranslationApp.initialize();
-        new TranslationUI();
     }
 }
