@@ -14,3 +14,13 @@ A Java-based application for translating text, detecting languages, and converti
    ```sh
    git clone https://github.com/Nakul-Ganesh-Ravisankar/Punt.git
    cd Punt
+2.Install dependencies (using Maven):
+
+   '''sh
+   mvn install
+3. Set up Google Cloud API keys for Translation, Speech-to-Text, and Text-to-Speech.
+
+4.Run the application:
+
+   '''sh
+   mvn exec:java -Dexec.mainClass="yourpackage.TranslationUI"
