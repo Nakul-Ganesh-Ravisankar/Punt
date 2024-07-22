@@ -1,22 +1,27 @@
+// TranslationApp.java
 import com.google.cloud.translate.*;
-import com.google.cloud.texttospeech.v1.*;
 import com.google.cloud.speech.v1.*;
-import com.google.protobu.ByteString;
+import com.google.cloud.texttospeech.v1.*;
 import javax.swing.*;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-public class TranslationApplication {
-    private static Translate trans;
-    private static SpeechClient speechC;
-    private static TextToSpeechClient ttsC;
+public class TranslationApp {
+    private static Translate translate;
+    private static SpeechClient speechClient;
+    private static TextToSpeechClient textToSpeechClient;
 
-    public static void initial() throws Exception {
-      //Translation API
-      trans = TranslateOptions.newBuilder().build().getService();
-      //SpeechToText API
-      speechC = SpeechClient.create();
-      //TextToSpeech API
-      ttsC = TextToSpeechClient.create();
+    public static void initialize() throws Exception {
+        // Initialize translation API
+        translate = TranslateOptions.newBuilder().build().getService();
+        
+        // Initialize speech-to-text API
+        speechClient = SpeechClient.create();
+        
+        // Initialize text-to-speech API
+        textToSpeechClient = TextToSpeechClient.create();
+    }
+
+    public static void main(String[] args) throws Exception {
+        TranslationApp.initialize();
+        new TranslationUI();
     }
 }
