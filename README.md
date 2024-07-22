@@ -1,4 +1,4 @@
-# Translation App
+# Translation Application
 
 ## Overview
 A Java-based application for translating text, detecting languages, and converting speech to text and vice versa.
@@ -13,4 +13,4 @@ A Java-based application for translating text, detecting languages, and converti
 1. Clone the repository:
    ```sh
    git clone https://github.com/Nakul-Ganesh-Ravisankar/Punt.git
-   cd Punk
+   cd Punt
