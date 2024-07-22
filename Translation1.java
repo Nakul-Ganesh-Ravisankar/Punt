@@ -1,7 +1,31 @@
+// TranslationService.java
+import com.google.cloud.translate.*;
+import com.google.cloud.speech.v1.*;
+import com.google.cloud.texttospeech.v1.*;
+import com.google.protobuf.ByteString;
+
 public class TranslationService {
-    public static String detectLanguage(String inp) {
-        Detection detect1 = trans.detect(inp);
-        return detect1.getLanguage();
+    private static Translate translate;
+    private static SpeechClient speechClient;
+    private static TextToSpeechClient textToSpeechClient;
+
+    public static void setTranslate(Translate translate) {
+        TranslationService.translate = translate;
+    }
+
+    public static void setSpeechClient(SpeechClient speechClient) {
+        TranslationService.speechClient = speechClient;
+    }
+
+    public static void setTextToSpeechClient(TextToSpeechClient textToSpeechClient) {
+        TranslationService.textToSpeechClient = textToSpeechClient;
+    }
+
+    public static String detectLanguage(String input) {
+        Detection detection = translate.detect(input);
+        return detection.getLanguage();
+    }
+
     public static String translateText(String input, String targetLanguage) {
         Translation translation = translate.translate(input, Translate.TranslateOption.targetLanguage(targetLanguage));
         return translation.getTranslatedText();
