@@ -19,3 +19,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+**5. `docs/documentation.md`**
+   - Provide detailed documentation if needed, such as setup instructions, deployment guidelines, and testing strategies.
+
+By following these instructions, you will have a well-organized GitHub repository with your Java application code and supporting documentation.
